@@ -3,16 +3,19 @@
 
   angular
     .module('patronage')
-    .controller('MainController', MainController);
+    .controller('UserController', UserController);
 
   /** @ngInject */
-  function MainController($timeout, webDevTec, toastr) {
+  function UserController($timeout, webDevTec, toastr, $http) {
     var vm = this;
 
     vm.awesomeThings = [];
     vm.classAnimation = '';
     vm.creationDate = 1451751192631;
     vm.showToastr = showToastr;
+
+    $http.get("https://api.github.com/users")
+       .then(function(response) {vm.users = response.data;});
 
     activate();
 
@@ -35,5 +38,6 @@
         awesomeThing.rank = Math.random();
       });
     }
+
   }
 })();
