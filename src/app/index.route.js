@@ -15,6 +15,21 @@
         controllerAs: 'main'
       });
 
+    $stateProvider
+      .state('users', {
+              url: '/users',
+              templateUrl: 'app/users/main.html',
+              controller: 'UserController',
+              controllerAs: 'main'
+        });
+    $stateProvider
+          .state('about', {
+              url: '/about',
+              templateUrl: 'app/about/main.html',
+              controller: 'MainController',
+              controllerAs: 'main'
+          });
+
     $urlRouterProvider.otherwise('/');
   }
 
