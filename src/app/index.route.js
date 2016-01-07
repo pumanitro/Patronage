@@ -26,7 +26,7 @@
           .state('about', {
               url: '/about',
               templateUrl: 'app/about/main.html',
-              controller: 'MainController',
+              controller: 'AboutController',
               controllerAs: 'main'
           });
 

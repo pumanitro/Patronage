@@ -2,7 +2,6 @@
 
     <header class="mdl-layout__header">
         <acme-navbar creation-date="main.creationDate"></acme-navbar>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     </header>
 
     <div class="mdl-layout__drawer">
@@ -17,9 +16,29 @@
 
     <main class="mdl-layout__content">
         <div class="page-content">
+
+            <div class="mdl-grid">
+                <div class="mdl-cell mdl-cell--12-col">
+                    <div class="mdl-shadow--2dp" style="width:100%;height: 99px !important;">
+                        <div class="mdl-card__title" style="text-align: center;display: block;">
+                            <form action="#/users">
+                                <div class="mdl-textfield mdl-js-textfield">
+                                    <input class="mdl-textfield__input" type="text" pattern="[0-9]*(\.[0-9]+)?" id="userStartId">
+                                    <label class="mdl-textfield__label" for="userStartId">Type user ID...</label>
+                                    <span class="mdl-textfield__error">Input is not a positive number or 0!</span>
+                                </div>
+                                <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent" style="margin-left:10px;" ng-click="main.replaceUsers()">
+                                    Generate list
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div class="mdl-grid">
 
-                <div class="mdl-cell mdl-cell--2-col" ng-repeat="user in main.users">
+                <div id="usersCard" class="mdl-cell mdl-cell--2-col" ng-repeat="user in main.users">
                     <div class="acme-card-square mdl-card mdl-shadow--2dp">
                         <div class="mdl-card__title" style="display: block;">
                             <b>
@@ -33,7 +52,7 @@
                         </div>
                         <div class="mdl-card__actions mdl-card--border">
                             <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" ng-href="{{ user.html_url }}">
-                                <i class="fa fa-github"></i> Git Site
+                                <i class="fa fa-github"></i> Github Site
                             </a>
                         </div>
                     </div>
