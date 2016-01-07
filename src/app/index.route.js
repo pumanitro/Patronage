@@ -31,7 +31,7 @@
           });
     $stateProvider
           .state('user', {
-              url: '/users/',
+              url: '/users/:login',
               templateUrl: 'app/users/user/main.html',
               controller: 'UserController',
               controllerAs: 'main'

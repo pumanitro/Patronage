@@ -6,25 +6,17 @@
     .controller('UserController', UserController);
 
   /** @ngInject */
-  function UserController($timeout, webDevTec, toastr, $http) {
+  function UserController($timeout, webDevTec, toastr, $http, $state) {
     var vm = this;
 
     vm.awesomeThings = [];
     vm.classAnimation = '';
     vm.creationDate = 1451751192631;
     vm.showToastr = showToastr;
-
-    vm.replaceUsers = function()
-    {
-        var pageAdress="https://api.github.com/users?since=";
-        pageAdress=pageAdress+$("#userStartId").val();
-
-        $http.get(pageAdress)
-            .then(function(response) {vm.users = response.data;});
-    };
+    vm.urlParams = $state.params;
 
     $http.get("https://api.github.com/users")
-       .then(function(response) {vm.users = response.data;});
+       .then(function(response) {vm.user = response.data;});
 
 
     activate();
