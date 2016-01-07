@@ -3,10 +3,10 @@
 
   angular
     .module('patronage')
-    .controller('UsersController', UsersController);
+    .controller('UserController', UserController);
 
   /** @ngInject */
-  function UsersController($timeout, webDevTec, toastr, $http) {
+  function UserController($timeout, webDevTec, toastr, $http) {
     var vm = this;
 
     vm.awesomeThings = [];

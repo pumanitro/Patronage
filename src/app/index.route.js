@@ -19,13 +19,20 @@
       .state('users', {
               url: '/users',
               templateUrl: 'app/users/main.html',
-              controller: 'UserController',
+              controller: 'UsersController',
               controllerAs: 'main'
         });
     $stateProvider
           .state('about', {
               url: '/about',
               templateUrl: 'app/about/main.html',
+              controller: 'AboutController',
+              controllerAs: 'main'
+          });
+    $stateProvider
+          .state('user', {
+              url: '/users/{login}',
+              templateUrl: 'app/users/user/main.html',
               controller: 'AboutController',
               controllerAs: 'main'
           });
