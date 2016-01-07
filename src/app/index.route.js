@@ -31,9 +31,9 @@
           });
     $stateProvider
           .state('user', {
-              url: '/users/{login}',
+              url: '/users/',
               templateUrl: 'app/users/user/main.html',
-              controller: 'AboutController',
+              controller: 'UserController',
               controllerAs: 'main'
           });
 
