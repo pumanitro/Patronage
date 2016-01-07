@@ -3,28 +3,26 @@
 
   angular
     .module('patronage')
-    .controller('UsersController', UsersController);
+    .controller('UserController', UserController);
 
   /** @ngInject */
-  function UsersController($timeout, webDevTec, toastr, $http) {
+  function UserController($timeout, webDevTec, toastr, $http, $state) {
     var vm = this;
 
     vm.awesomeThings = [];
     vm.classAnimation = '';
     vm.creationDate = 1451751192631;
     vm.showToastr = showToastr;
+    vm.urlParams = $state.params;
 
-    vm.replaceUsers = function()
-    {
-        var pageAdress="https://api.github.com/users?since=";
-        pageAdress=pageAdress+$("#userStartId").val();
-
-        $http.get(pageAdress)
-            .then(function(response) {vm.users = response.data;});
-    };
-
-    $http.get("https://api.github.com/users")
-       .then(function(response) {vm.users = response.data;});
+    $http.get("https://api.github.com/users/"+vm.urlParams.login)
+       .then(function(response) {
+            vm.user = response.data;
+        },function(response){
+            $("#userTop").hide();
+            $("#userContent").hide();
+            $("#userTopH2").html("<i class='fa fa-frown-o fa-5x'></i> This user doesn't exist.")
+        });
 
 
     activate();

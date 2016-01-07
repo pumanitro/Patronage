@@ -1,0 +1,50 @@
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+
+    <header class="mdl-layout__header">
+        <acme-navbar creation-date="main.creationDate"></acme-navbar>
+    </header>
+
+    <div class="mdl-layout__drawer">
+        <span class="mdl-layout-title">Title</span>
+        <nav class="mdl-navigation">
+            <a class="mdl-navigation__link" href="">Link</a>
+            <a class="mdl-navigation__link" href="">Link</a>
+            <a class="mdl-navigation__link" href="">Link</a>
+            <a class="mdl-navigation__link" href="">Link</a>
+        </nav>
+    </div>
+
+    <main class="mdl-layout__content">
+        <div class="page-content">
+            <div class="mdl-card mdl-shadow--2dp" style="width: 100%;height: 100%;">
+                <div class="mdl-card__title" style="text-align: center;display: block;">
+                    <div id="userTop" style="width: 100%;">
+                        <img  style="width: 150px;height: 150px;" ng-src="{{ main.user.avatar_url }}" alt="User IMG">
+                    </div>
+                    <h2 id="userTopH2" style="text-align: center;display: block;">{{ main.user.login }}</h2>
+                </div>
+                <div id="userContent" class="mdl-card__actions mdl-card--border">
+                    <div style="font-size: 2em;">
+                        <h5>Name: {{ main.user.name }}</h5>
+                        <h5>ID: {{ main.user.id }}</h5>
+                        <h5>Company: {{ main.user.company }}</h5>
+                        <h5>Blog: <a href="{{ main.user.blog }}" target="_blank">{{ main.user.blog }}</a></h5>
+                        <h5>Location: {{ main.user.location }}</h5>
+                        <h5>E-mail: {{ main.user.email }}</h5>
+                        <h5>Followers: {{ main.user.followers }}</h5>
+                        <h5><i class="fa fa-github-alt"></i> GitHub: <a href="{{ main.user.html_url }}" target="_blank">{{ main.user.html_url }}</a></h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="mdl-mini-footer">
+        <div class="mdl-mini-footer__right-section">
+            <div class="mdl-logo">
+                Created by IIJ</acme-malarkey>
+            </div>
+        </div>
+    </footer>
+
+</div>
