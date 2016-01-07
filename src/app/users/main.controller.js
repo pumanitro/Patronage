@@ -21,8 +21,6 @@
 
         $http.get(pageAdress)
             .then(function(response) {vm.users = response.data;});
-
-        $("#usersCard").attr("ng-repeat", "user in main.users");
     };
 
     $http.get("https://api.github.com/users")
