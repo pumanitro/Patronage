@@ -18,8 +18,10 @@
         <div class="page-content">
             <div class="mdl-card mdl-shadow--2dp" style="width: 100%;height: 100%;">
                 <div class="mdl-card__title" style="text-align: center;display: block;">
-                    <h2 class="mdl-card__title-text" style="text-align: center;display: block;"><i class="fa fa-user fa-5x"></i></h2>
-                    <h2 style="text-align: center;display: block;">{{ main.urlParams.login }}</h2>
+                    <div class="mdl-card__title-text" style="text-align: center;display: block; width: 100px; height: 100px;">
+                        <img src="{{ main.user.avatar_url }}" alt="User IMG"/>
+                    </div>
+                    <h2 style="text-align: center;display: block;">{{ main.user.login }}</h2>
                 </div>
                 <div class="mdl-card__actions mdl-card--border">
                     <div style="font-size: 2em;">

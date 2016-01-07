@@ -15,7 +15,7 @@
     vm.showToastr = showToastr;
     vm.urlParams = $state.params;
 
-    $http.get("https://api.github.com/users")
+    $http.get("https://api.github.com/users/"+vm.urlParams.login)
        .then(function(response) {vm.user = response.data;});
 
 
