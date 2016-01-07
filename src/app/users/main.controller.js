@@ -16,16 +16,13 @@
 
     vm.replaceUsers = function()
     {
-        $("#userStartId").toggle();
-
         var pageAdress="https://api.github.com/users?since=";
-        pageAdress=pageAdress+$("#userStartId").text;
+        pageAdress=pageAdress+$("#userStartId").val();
 
         $http.get(pageAdress)
             .then(function(response) {vm.users = response.data;});
 
         $("#usersCard").attr("ng-repeat", "user in main.users");
-        window.alert(5 + 6);
     };
 
     $http.get("https://api.github.com/users")
