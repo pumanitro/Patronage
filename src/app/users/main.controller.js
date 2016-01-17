@@ -6,7 +6,7 @@
     .controller('UsersController', UsersController);
 
   /** @ngInject */
-  function UsersController($timeout, webDevTec, toastr, $http) {
+  function UsersController($timeout, webDevTec, toastr, $http, $scope) {
     var vm = this;
 
     vm.awesomeThings = [];
@@ -17,7 +17,7 @@
     vm.replaceUsers = function()
     {
         var pageAdress="https://api.github.com/users?since=";
-        pageAdress=pageAdress+angular.element("#userStartId").val();
+        pageAdress=pageAdress+$scope.userStartId;
 
         $http.get(pageAdress)
             .then(function(response) {vm.users = response.data;});
