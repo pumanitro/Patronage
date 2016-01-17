@@ -17,7 +17,7 @@
     vm.replaceUsers = function()
     {
         var pageAdress="https://api.github.com/users?since=";
-        pageAdress=pageAdress+$("#userStartId").val();
+        pageAdress=pageAdress+angular.element("#userStartId").val();
 
         $http.get(pageAdress)
             .then(function(response) {vm.users = response.data;});

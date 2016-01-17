@@ -19,9 +19,9 @@
        .then(function(response) {
             vm.user = response.data;
         },function(response){
-            $("#userTop").hide();
-            $("#userContent").hide();
-            $("#userTopH2").html("<i class='fa fa-frown-o fa-5x'></i> This user doesn't exist.")
+            angular.element("#userTop").hide();
+            angular.element("#userContent").hide();
+            angular.element("#userTopH2").html("<i class='fa fa-frown-o fa-5x'></i> This user doesn't exist.")
         });
 
 
