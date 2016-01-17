@@ -18,9 +18,9 @@
     $stateProvider
       .state('users', {
               url: '/users',
-              templateUrl: 'app/users/main.html',
+              templateUrl: 'app/users/users.html',
               controller: 'UsersController',
-              controllerAs: 'main'
+              controllerAs: 'UsersController'
         });
     $stateProvider
           .state('about', {
