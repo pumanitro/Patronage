@@ -32,9 +32,9 @@
     $stateProvider
           .state('user', {
               url: '/users/:login',
-              templateUrl: 'app/users/user/main.html',
+              templateUrl: 'app/users/user/user.html',
               controller: 'UserController',
-              controllerAs: 'main'
+              controllerAs: 'UserController'
           });
 
     $urlRouterProvider.otherwise('/');

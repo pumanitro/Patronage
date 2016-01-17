@@ -19,20 +19,20 @@
             <div class="mdl-card mdl-shadow--2dp" style="width: 100%;height: 100%;">
                 <div class="mdl-card__title" style="text-align: center;display: block;">
                     <div id="userTop" style="width: 100%;">
-                        <img  style="width: 150px;height: 150px;" ng-src="{{ main.user.avatar_url }}" alt="User IMG">
+                        <img  style="width: 150px;height: 150px;" ng-src="{{ UserController.user.avatar_url }}" alt="User IMG">
                     </div>
-                    <h2 id="userTopH2" style="text-align: center;display: block;">{{ main.user.login }}</h2>
+                    <h2 id="userTopH2" style="text-align: center;display: block;">{{ UserController.user.login }}</h2>
                 </div>
                 <div id="userContent" class="mdl-card__actions mdl-card--border">
                     <div style="font-size: 2em;">
-                        <h5>Name: {{ main.user.name }}</h5>
-                        <h5>ID: {{ main.user.id }}</h5>
-                        <h5>Company: {{ main.user.company }}</h5>
-                        <h5>Blog: <a href="{{ main.user.blog }}" target="_blank">{{ main.user.blog }}</a></h5>
-                        <h5>Location: {{ main.user.location }}</h5>
-                        <h5>E-mail: {{ main.user.email }}</h5>
-                        <h5>Followers: {{ main.user.followers }}</h5>
-                        <h5><i class="fa fa-github-alt"></i> GitHub: <a href="{{ main.user.html_url }}" target="_blank">{{ main.user.html_url }}</a></h5>
+                        <h5>Name: {{ UserController.user.name }}</h5>
+                        <h5>ID: {{ UserController.user.id }}</h5>
+                        <h5>Company: {{ UserController.user.company }}</h5>
+                        <h5>Blog: <a href="{{ UserController.user.blog }}" target="_blank">{{ UserController.user.blog }}</a></h5>
+                        <h5>Location: {{ UserController.user.location }}</h5>
+                        <h5>E-mail: {{ UserController.user.email }}</h5>
+                        <h5>Followers: {{ UserController.user.followers }}</h5>
+                        <h5><i class="fa fa-github-alt"></i> GitHub: <a href="{{ UserController.user.html_url }}" target="_blank">{{ UserController.user.html_url }}</a></h5>
                     </div>
                 </div>
             </div>
