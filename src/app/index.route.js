@@ -25,9 +25,9 @@
     $stateProvider
           .state('about', {
               url: '/about',
-              templateUrl: 'app/about/main.html',
+              templateUrl: 'app/about/about.html',
               controller: 'AboutController',
-              controllerAs: 'main'
+              controllerAs: 'AboutController'
           });
     $stateProvider
           .state('user', {
