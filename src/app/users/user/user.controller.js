@@ -18,10 +18,8 @@
     $http.get("https://api.github.com/users/"+vm.urlParams.login)
        .then(function(response) {
             vm.user = response.data;
-        },function(response){
-            $("#userTop").hide();
-            $("#userContent").hide();
-            $("#userTopH2").html("<i class='fa fa-frown-o fa-5x'></i> This user doesn't exist.")
+        },function errorCallback(response) {
+            $state.go('errors');
         });
 
 

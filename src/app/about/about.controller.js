@@ -6,7 +6,7 @@
         .controller('AboutController', AboutController);
 
     /** @ngInject */
-    function AboutController($scope) {
+    function AboutController() {
         var vm = this;
 
         vm.awesomeThings = [];

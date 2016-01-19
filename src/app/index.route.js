@@ -10,31 +10,33 @@
     $stateProvider
       .state('home', {
         url: '/',
-        templateUrl: 'app/main/main.html',
-        controller: 'MainController',
-        controllerAs: 'main'
-      });
-
-    $stateProvider
+        templateUrl: 'app/home/home.html',
+        controller: 'HomeController',
+        controllerAs: 'HomeController'
+      })
       .state('users', {
               url: '/users',
-              templateUrl: 'app/users/main.html',
+              templateUrl: 'app/users/users.html',
               controller: 'UsersController',
-              controllerAs: 'main'
-        });
-    $stateProvider
-          .state('about', {
+              controllerAs: 'UsersController'
+        })
+      .state('about', {
               url: '/about',
-              templateUrl: 'app/about/main.html',
+              templateUrl: 'app/about/about.html',
               controller: 'AboutController',
-              controllerAs: 'main'
-          });
-    $stateProvider
-          .state('user', {
+              controllerAs: 'AboutController'
+        })
+      .state('user', {
               url: '/users/:login',
-              templateUrl: 'app/users/user/main.html',
+              templateUrl: 'app/users/user/user.html',
               controller: 'UserController',
-              controllerAs: 'main'
+              controllerAs: 'UserController'
+          })
+      .state('errors', {
+              url: '/errors/404',
+              templateUrl: 'app/errors/404.html',
+              controller: '404Controller',
+              controllerAs: '404Controller'
           });
 
     $urlRouterProvider.otherwise('/');

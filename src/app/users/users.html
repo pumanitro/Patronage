@@ -1,19 +1,4 @@
-<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-
-    <header class="mdl-layout__header">
-        <acme-navbar creation-date="main.creationDate"></acme-navbar>
-    </header>
-
-    <div class="mdl-layout__drawer">
-        <span class="mdl-layout-title">Title</span>
-        <nav class="mdl-navigation">
-            <a class="mdl-navigation__link" href="">Link</a>
-            <a class="mdl-navigation__link" href="">Link</a>
-            <a class="mdl-navigation__link" href="">Link</a>
-            <a class="mdl-navigation__link" href="">Link</a>
-        </nav>
-    </div>
-
+<div class="mdl-grid">
     <main class="mdl-layout__content">
         <div class="page-content">
 
@@ -23,11 +8,11 @@
                         <div class="mdl-card__title" style="text-align: center;display: block;">
                             <form action="#/users">
                                 <div class="mdl-textfield mdl-js-textfield">
-                                    <input class="mdl-textfield__input" type="text" pattern="[0-9]*(\.[0-9]+)?" id="userStartId">
+                                    <input class="mdl-textfield__input" type="text" pattern="[0-9]*(\.[0-9]+)?" ng-model="userStartId" id="userStartId">
                                     <label class="mdl-textfield__label" for="userStartId">Type user ID...</label>
                                     <span class="mdl-textfield__error">Input is not a positive number or 0!</span>
                                 </div>
-                                <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent" style="margin-left:10px;" ng-click="main.replaceUsers()">
+                                <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent" style="margin-left:10px;" ng-click="UsersController.replaceUsers()">
                                     Generate list
                                 </button>
                             </form>
@@ -38,7 +23,7 @@
 
             <div class="mdl-grid">
 
-                <div id="usersCard" class="mdl-cell mdl-cell--2-col" ng-repeat="user in main.users">
+                <div id="usersCard" class="mdl-cell mdl-cell--2-col" ng-repeat="user in UsersController.users">
                     <div class="acme-card-square mdl-card mdl-shadow--2dp">
                         <div class="mdl-card__title" style="display: block;">
                             <b>
@@ -61,13 +46,4 @@
             </div>
         </div>
     </main>
-
-    <footer class="mdl-mini-footer">
-        <div class="mdl-mini-footer__right-section">
-            <div class="mdl-logo">
-               Created by IIJ
-            </div>
-        </div>
-    </footer>
-
 </div>
