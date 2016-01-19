@@ -31,6 +31,12 @@
               templateUrl: 'app/users/user/user.html',
               controller: 'UserController',
               controllerAs: 'UserController'
+          })
+      .state('errors', {
+              url: '/errors/404',
+              templateUrl: 'app/errors/404.html',
+              controller: '404Controller',
+              controllerAs: '404Controller'
           });
 
     $urlRouterProvider.otherwise('/');

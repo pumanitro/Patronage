@@ -7,9 +7,6 @@
 
     /** @ngInject */
     function ErrorsController() {
-        var vm = this;
 
-        vm.awesomeThings = [];
-        vm.classAnimation = '';
     }
 })();

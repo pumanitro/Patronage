@@ -19,7 +19,7 @@
        .then(function(response) {
             vm.user = response.data;
         },function errorCallback(response) {
-            $state.go('errors.404');
+            $state.go('errors');
         });
 
 
