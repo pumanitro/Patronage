@@ -26,29 +26,13 @@
     <![endif]-->
 
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-        <header class="mdl-layout__header">
-            <acme-navbar creation-date="main.creationDate"></acme-navbar>
-        </header>
 
-        <div class="mdl-layout__drawer">
-            <span class="mdl-layout-title">Title</span>
-            <nav class="mdl-navigation">
-                <a class="mdl-navigation__link" href="">Link</a>
-                <a class="mdl-navigation__link" href="">Link</a>
-                <a class="mdl-navigation__link" href="">Link</a>
-                <a class="mdl-navigation__link" href="">Link</a>
-            </nav>
-        </div>
+        <div ng-include="'app/template/header.html'"></div>
 
         <div ui-view></div>
 
-        <footer class="mdl-mini-footer">
-            <div class="mdl-mini-footer__right-section">
-                <div class="mdl-logo">
-                    Created by IIJ
-                </div>
-            </div>
-        </footer>
+        <div ng-include="'app/template/footer.html'"></div>
+
     </div>
 
     <!-- build:js(src) scripts/vendor.js -->
