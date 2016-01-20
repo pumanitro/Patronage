@@ -7,10 +7,6 @@
 
     /** @ngInject */
     function AboutController() {
-        var vm = this;
-
-        vm.awesomeThings = [];
-        vm.classAnimation = '';
 
     }
 })();
